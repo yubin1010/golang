@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  traefik:
+    image: traefik:v1.7
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /Volumes/T7/golang/traefik/traefik.toml:/traefik.toml
+      - /Volumes/T7/golang/traefik/acme.json:/acme.json
+    container_name: traefik
+
+networks:
+  web:
+    external: true

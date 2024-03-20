@@ -1,0 +1,2 @@
+# github.com/appleboy/com v0.0.0-20180410030638-c0b5901f9622
+github.com/appleboy/com/random
